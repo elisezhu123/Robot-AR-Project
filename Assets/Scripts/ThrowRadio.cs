@@ -5,27 +5,17 @@ using UnityEngine;
 public class ThrowRadio : MonoBehaviour
 {
     public float throwForce = 200f;
-
     public Vector3 stanTra = new(0, 1f, 0); //stanTra = stanTra + offset;
-
-
     private bool isTouched = false;
     private bool isThrown = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
     private Vector3 startPosition;
     private Vector3 endPosition;
-    
     private Vector3 offset;
-        private int timeFlick; 
-        
+    private int timeFlick; 
     private float disFlick;
-
     private float speedFlick;
-
     private Camera ARcamera;
-
-
+    
     void Start()
     {
         ARcamera = Camera.main;
@@ -39,7 +29,7 @@ public class ThrowRadio : MonoBehaviour
         }
     }
 
-    private void resetVari(){
+    private void ResetVari(){
         startPosition = Input.mousePosition;
         endPosition = Input.mousePosition;
     }
@@ -57,7 +47,7 @@ public class ThrowRadio : MonoBehaviour
         timeFlick += 25;
         if (Input.GetMouseButtonDown(0))
         {
-            resetVari();
+            ResetVari();
         }
 
         if (Input.GetMouseButton(0))
@@ -78,17 +68,21 @@ public class ThrowRadio : MonoBehaviour
             }
         }
     }
-    private void Throw(){
+    public void Throw(){
         transform.gameObject.AddComponent<Rigidbody>();
         Rigidbody _rigRadio = transform.GetComponent<Rigidbody>();
-#pragma warning disable UNT0024 // Give priority to scalar calculations over vector calculations
         _rigRadio.linearVelocity = offset * 0.003f * speedFlick;
-#pragma warning restore UNT0024 // Give priority to scalar calculations over vector calculations
         _rigRadio.AddForce(transform.parent.parent.transform.forward * throwForce);
         _rigRadio.AddTorque(transform.right);
         _rigRadio.linearDamping= 0.5f;
         isThrown = true;
-        transform.parent = null;
+        transform.parent = null;  
+        StartCoroutine(DelayRadio());
+    }
+    IEnumerator DelayRadio()
+    {
+        yield return new WaitForSeconds(0.2f);
+        RadioProduce.instance.LaunchRadio();
     }
 }
 
