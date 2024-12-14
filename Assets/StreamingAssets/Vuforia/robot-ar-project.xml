@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="test2" size="10.000000 5.629046" />
+    <ImageTarget name="image_target-gigapixel-standardv2-4x" size="10.000000 6.473029" />
   </Tracking>
 </QCARConfig>
