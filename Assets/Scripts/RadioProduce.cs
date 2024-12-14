@@ -14,13 +14,6 @@ public class RadioProduce : MonoBehaviour
     void Start()
     {
         Radio = Resources. LoadAll<GameObject>("Radio");
-        LaunchRadio();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void LaunchRadio()
@@ -28,5 +21,11 @@ public class RadioProduce : MonoBehaviour
          GameObject _Radio=Instantiate(Radio[0],PosInRadio.position,PosInRadio.rotation); 
          _Radio.transform.SetParent(PosInRadio);
          _Radio.gameObject.GetComponent<SphereCollider>();
+    }
+
+    public void TriggerLaunchRadio()
+    {
+        Debug.Log("Button clicked - Launch Radio triggered");
+        LaunchRadio();
     }
 }
