@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class RadioThrow : MonoBehaviour
+public class RadioProduce : MonoBehaviour
 {
     public Transform PosInRadio;
-    private GameObject[] RadioLocation;
+    private GameObject[] Radio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        RadioLocation= Resources. LoadAll<GameObject>("Radio");
+        Radio = Resources. LoadAll<GameObject>("Radio");
         LaunchRadio();
     }
 
@@ -19,6 +19,8 @@ public class RadioThrow : MonoBehaviour
 
     private void LaunchRadio()
     {
-         Instantiate(RadioLocation[0],PosInRadio.position,PosInRadio.rotation); 
+         GameObject _Radio=Instantiate(Radio[0],PosInRadio.position,PosInRadio.rotation); 
+         _Radio.transform.SetParent(PosInRadio);
+         _Radio.gameObject.GetComponent<SphereCollider>();
     }
 }
