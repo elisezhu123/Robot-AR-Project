@@ -36,7 +36,7 @@ public class ThrowRadio : MonoBehaviour
     
     private void OnMouseDown()
     {
-        if (!isTouched == false)
+        if (isThrown == false)
         {
             isTouched = true;
         }

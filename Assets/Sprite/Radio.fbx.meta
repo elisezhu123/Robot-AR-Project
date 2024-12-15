@@ -3,7 +3,12 @@ guid: 01f3fba81f71e42e293c32050a407db5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: radiobody_UNFOLD7_initialShadingGroup1
+    second: {fileID: 2100000, guid: 5a5b74ebd16b34058ac08bb43aa310e9, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

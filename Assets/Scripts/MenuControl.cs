@@ -1,9 +1,8 @@
 using UnityEngine;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
-public class MenuControl: MonoBehaviour
+public class MenuControl : MonoBehaviour
 {
     public GameObject triangle; // Reference to the triangle GameObject
     public float delay = 0.5f;  // Delay before transitioning to the next scene
@@ -22,7 +21,7 @@ public class MenuControl: MonoBehaviour
         StartCoroutine(LoadSceneAfterDelay());
     }
 
-     private IEnumerator LoadSceneAfterDelay()
+    private IEnumerator LoadSceneAfterDelay()
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene(1); // Transition to the AR scene
@@ -30,8 +29,11 @@ public class MenuControl: MonoBehaviour
 
     public void QuitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false; // Stop play mode in the editor
-        Application.Quit(); 
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // Stop play mode in Unity Editor
+#else
+        Application.Quit(); // Quit the application in a built version
+#endif
         Debug.Log("Quitting Game...");
     }
 }
