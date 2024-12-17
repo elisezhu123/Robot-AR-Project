@@ -8,17 +8,19 @@ public class ButtonController : MonoBehaviour
     // Function to show the triangle when Start is clicked
     public void OnStartButtonClick()
     {
-        if (Active != null)
+        // Check if the Active object is not null
+        if (Active != null) 
         {
             // Set the triangle image to active
             Active.SetActive(true);
         }
     }
 
-    // Function to hide the triangle when Quit is clicked (optional)
+    // Function to hide the triangle when Quit is clicked
     public void OnQuitButtonClick()
     {
-        if (Active != null)
+        // Check if the Active object is not null
+        if (Active != null) 
         {
             // Hide the triangle image
             Active.SetActive(false);

@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; // Import the SceneManagement namespace
 
 public class MenuControl : MonoBehaviour
 {
@@ -9,31 +9,35 @@ public class MenuControl : MonoBehaviour
 
     public void StartGame()
     {
-        Debug.Log("Starting Game..."); // Log a message to the console
+        // Log a message to the console
+        Debug.Log("Starting Game..."); 
 
-        // Activate the triangle GameObject
+        // Check if the triangle is not null
         if (triangle != null)
         {
+            // Activate the triangle GameObject
             triangle.SetActive(true);
         }
-
         // Start the coroutine to transition to the next scene
         StartCoroutine(LoadSceneAfterDelay());
     }
 
+    // Load a scene after a delay
     private IEnumerator LoadSceneAfterDelay()
     {
+        //Pause the execution of the coroutine for a specified amount of time.
         yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(1); // Transition to the AR scene
+        // Transition to the AR scene
+        SceneManager.LoadScene(1); 
     }
 
     public void QuitGame()
     {
-#if UNITY_EDITOR
+    #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // Stop play mode in Unity Editor
-#else
+    #else
         Application.Quit(); // Quit the application in a built version
-#endif
-        Debug.Log("Quitting Game...");
+    #endif
+        Debug.Log("Quitting Game..."); // Log a message to the console
     }
 }

@@ -1,29 +1,32 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections;
-using System.Collections.Generic;   
+using System.Collections.Generic;
 
 public class Up: MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-   bool isPressed = false;
-   public GameObject player;
-   public float Force;
+   bool isPressed = false; // Declare a boolean variable to store whether a key is pressed or not
+   public GameObject player; // Declare a GameObject variable to store the player object
+   public float Force; // Declare a float variable to store the force applied to the player
 
-    // Update is called once per frame
     void Update()
     {
+        // If the button is pressed, move the player to the left
         if (isPressed)
         {
+            
+            //Move the player in the y-axis by the force multiplied by the time deltaTime
             player.transform.Translate(0, Force * Time.deltaTime, 0);
         }
     }
 
+    // When the button is pressed down, set isPressed to true
     public void OnPointerDown(PointerEventData eventData)
     {
         isPressed = true;
     }
 
+    // When the button is released, set isPressed to false
     public void OnPointerUp(PointerEventData eventData)
     {
         isPressed = false;

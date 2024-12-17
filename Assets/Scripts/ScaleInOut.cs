@@ -4,49 +4,55 @@ using UnityEngine;
 
 public class ScaleInOut : MonoBehaviour
 {
-    public GameObject Object;
 
-    private bool _ZoomIn;
+    public GameObject Object; // Declare a GameObject variable
+    // Declare two boolean variables to store zoom in and zoom out states
+    private bool _ZoomIn; 
     private bool _ZoomOut;
+    public float Scale = 0.1f; // Declare a public float variable named Scale and assigns it a value of 0.1f.
 
-    // Object scale speed
-    public float Scale = 0.1f;
-
-    // Update is called once per frame
     void Update()
     {
+        // Check if the zoom-in button is pressed
         if (_ZoomIn)
         {
-            // Make a bigger object
+            // Increases the scale of an object by the value of the variable Scale
             Object.transform.localScale += new Vector3(Scale, Scale, Scale);
         }
 
+       // Check if the zoom-out button is pressed
         if (_ZoomOut)
         {
-            // Make a small object
+            // Decreases the scale of an object by the value of the variable Scale
             Object.transform.localScale -= new Vector3(Scale, Scale, Scale);
         }
     }
 
-    // Make object scaled big
+    // This function is called when the zoom-in button is pressed
     public void OnPressZoomIn()
     {
+        // Set the ZoomIn flag to true
         _ZoomIn = true;
     }
 
+    // This function is called when the user releases the zoom-in button
     public void OnReleaseZoomIn()
     {
+         // Set the ZoomIn flag to false
         _ZoomIn = false;
     }
 
-    // Make object scaled small
+    // This function is called when the zoom-out button is pressed
     public void OnPressZoomOut()
     {
+        // Set the ZoomOut flag to true
         _ZoomOut = true;
     }
 
+    // This function is called when the user releases the zoom-out button
     public void OnReleaseZoomOut()
     {
+        // Set the ZoomOut flag to false
         _ZoomOut = false;
     }
 }

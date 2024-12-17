@@ -56,5 +56,7 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Robot-AR-Project.sln"
+    "dotnet.defaultSolution": "Robot-AR-Project.sln",
+    "Codegeex.Comment.LanguagePreference": "English",
+    "Codegeex.Chat.LanguagePreference": "中文"
 }
