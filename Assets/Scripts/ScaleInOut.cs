@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ScaleInOut : MonoBehaviour
 {
-
     public GameObject Object; // Declare a GameObject variable
     // Declare two boolean variables to store zoom in and zoom out states
     private bool _ZoomIn; 
