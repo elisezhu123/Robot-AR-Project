@@ -3,7 +3,7 @@ using UnityEngine;
 public class Music : MonoBehaviour
 {
     [SerializeField] AudioSource musicSource; // Declare a public AudioSource variable named "musicSource"
-    [SerializeField] AudioSource SoundEffects; // Declare a public AudioClip variable named "SoundEffects"
+    [SerializeField] AudioSource SoundEffects; // Declare a public AudioSource variable named "SoundEffects"
     
     public AudioClip background; // Declare a public AudioClip variable named "backgroundMusic"
     public AudioClip buttonClick; // Declare a public AudioClip variable named "buttonClick"
