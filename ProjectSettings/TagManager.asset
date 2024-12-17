@@ -6,6 +6,7 @@ TagManager:
   tags:
   - triangle
   - Ground
+  - Audio
   layers:
   - Default
   - TransparentFX
