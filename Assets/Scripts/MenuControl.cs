@@ -8,19 +8,10 @@ public class MenuControl : MonoBehaviour
     public GameObject triangle; // Reference to the triangle GameObject
     public float delay = 0.5f;  // Delay before transitioning to the next scene
 
-    Music audioManager; // Declare a Music variable named "audioManager"
-
-    private void Awake()
-    {
-        // Get the AudioManager component from the GameObject
-         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<Music>(); 
-    }   
-
     public void StartGame()
     {
         // Log a message to the console
         Debug.Log("Starting Game..."); 
-        audioManager.PlayButtonClick(audioManager.buttonClick); // Play the audio clip when the button is pressed
 
         // Check if the triangle is not null
         if (triangle != null)
@@ -43,7 +34,6 @@ public class MenuControl : MonoBehaviour
 
     public void QuitGame()
     {
-        audioManager.PlayButtonClick(audioManager.buttonClick); // Play the audio clip when the button is pressed
     #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false; // Stop play mode in Unity Editor
     #else

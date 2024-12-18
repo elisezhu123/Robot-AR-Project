@@ -1,0 +1,5 @@
+/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/.utmp/RelWithDebInfo/51c2l2n3/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/.utmp/RelWithDebInfo/51c2l2n3/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/.utmp/RelWithDebInfo/51c2l2n3/armeabi-v7a/GameActivity/CMakeFiles/game.dir
+/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/.utmp/RelWithDebInfo/51c2l2n3/armeabi-v7a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/.utmp/RelWithDebInfo/51c2l2n3/armeabi-v7a/GameActivity/CMakeFiles/rebuild_cache.dir
