@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Android;
 
-public class CameraPermissionHandler : MonoBehaviour
+public class CameraPermission: MonoBehaviour
 {
     void Start()
     {

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement; // Import the SceneManagement namespace
+using Vuforia; // Vuforia namespace
 
 public class MenuControl : MonoBehaviour
 {
