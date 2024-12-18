@@ -8,8 +8,7 @@ public class ScaleInOut : MonoBehaviour
     // Declare two boolean variables to store zoom in and zoom out states
     private bool _ZoomIn; 
     private bool _ZoomOut;
-    public float Scale = 0.1f; // Declare a public float variable named Scale and assigns it a value of 0.1f.
-
+    public float Scale = 0.3f; // Declare a public float variable named Scale and assigns it a value
     Music audioManager; // Declare a Music variable named "audioManager"
 
     private void Awake()

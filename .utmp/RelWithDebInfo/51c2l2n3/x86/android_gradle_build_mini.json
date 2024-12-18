@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/CMakeLists.txt",
+    "/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/src/main/cpp/GameActivity/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Applications/Unity/Hub/Editor/6000.0.24f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/.utmp/RelWithDebInfo/51c2l2n3/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Applications/Unity/Hub/Editor/6000.0.24f1/PlaybackEngines/AndroidPlayer/SDK/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/.utmp/RelWithDebInfo/51c2l2n3/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "game::@d02bb112ea9f9c2ed29f": {
+      "artifactName": "game",
+      "abi": "x86",
+      "output": "/Users/elise123/Study/Limerick/CS4071/assignment/Robot-AR-Project/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/51c2l2n3/obj/x86/libgame.so",
+      "runtimeFiles": []
+    }
+  }
+}
