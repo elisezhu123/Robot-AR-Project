@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is the manifest file for the Android application. It defines the permissions and activities that the application requires. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yourcompany.yourappname">
+
+    <!-- This permission is required to use the camera feature of the device. -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- This feature is required to use the camera feature of the device. -->
+    <uses-feature android:name="android.hardware.camera" android:required="true" />
+
+    <!-- This is the application element, which contains the activities and services that the application uses. -->
+    <application>
+        <!-- This is the activity element, which defines the UnityPlayerActivity activity. -->
+        <activity android:name="com.unity3d.player.UnityPlayerActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
+    </application>
+</manifest>
